@@ -184,7 +184,7 @@ jobs:
 
       - name: Download main baseline report.json artifact (last successful)
         id: download_baseline
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         continue-on-error: true
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -197,7 +197,7 @@ jobs:
       - name: Download legacy main baseline report.json artifact (last successful)
         if: steps.download_baseline.outcome != 'success'
         id: download_baseline_legacy
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         continue-on-error: true
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -442,7 +442,7 @@ jobs:
       - name: Download perf_smoke pageset-guardrails baseline (main)
         if: matrix.os == 'ubuntu-latest' && matrix.rust == 'stable' && steps.perf_smoke_pageset_guardrails.outcome == 'success'
         id: download_perf_smoke_pageset_guardrails_baseline
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         continue-on-error: true
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
